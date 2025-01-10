@@ -25,7 +25,7 @@ export const todoList = atom({
                 method: 'GET',
                 withCredentials: true,
                 crossorigin: true,
-                mode: 'no-cors',
+
                 headers: {
                     "Content-type": "application/json; charset=UTF-8",
                     authorization: `Bearer ${token}`

@@ -161,7 +161,7 @@ const AddTodo = memo(({ setAdd }) => {
                   method: 'POST',
                   withCredentials: true,
                   crossorigin: true,
-                  mode: 'no-cors',
+
 
                   body: JSON.stringify({
                     date: getDate,
@@ -170,7 +170,8 @@ const AddTodo = memo(({ setAdd }) => {
                   }),
 
                   headers: {
-                    "Content-type": "application/json; charset=UTF-8",
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`,
                   },
                 }
@@ -263,7 +264,8 @@ function TaskComp({ date, title, descripition }) {
           }),
 
           headers: {
-            "Content-type": "application/json; charset=UTF-8",
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
             authorization: `Bearer ${token}`,
           },
         });
@@ -274,14 +276,15 @@ function TaskComp({ date, title, descripition }) {
             method: 'POST',
             withCredentials: true,
             crossorigin: true,
-            mode: 'no-cors',
+
 
             body: JSON.stringify({
               title: title,
             }),
 
             headers: {
-              "Content-type": "application/json; charset=UTF-8",
+              'Accept': 'application/json, text/plain, */*',
+              'Content-Type': 'application/json',
               Authorization: `Bearer ${token}`,
             },
           }
