@@ -22,6 +22,13 @@ const authMiddlware = async (req, res, next) => {
         const decode = jwt.verify(token, JWT_SECRET);
         req.userId = decode.userId;
 
+        res.setHeader('Access-Control-Allow-Origin', 'https://full-stack-todo-eta.vercel.app/'); // Replace with your client domain
+
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+
         next()
     }
 
