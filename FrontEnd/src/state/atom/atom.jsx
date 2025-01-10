@@ -22,6 +22,10 @@ export const todoList = atom({
         get: async () => {
             const token = localStorage.getItem("Bearer");
             const response = await fetch("https://full-stack-todo-c3cg.vercel.app/todo/listtodo", {
+                method: 'GET',
+                withCredentials: true,
+                crossorigin: true,
+                mode: 'no-cors',
                 headers: {
                     "Content-type": "application/json; charset=UTF-8",
                     authorization: `Bearer ${token}`
@@ -44,7 +48,7 @@ export const completeTodoList = atom({
                 method: 'GET',
                 withCredentials: true,
                 crossorigin: true,
-                mode: 'no-cors',
+
                 headers: {
                     "Content-type": "application/json; charset=UTF-8",
                     authorization: `Bearer ${token}`
