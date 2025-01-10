@@ -13,7 +13,8 @@ import {
   todoList,
 } from "../state/atom/atom.jsx";
 import { useNavigate } from "react-router-dom";
-import Image from "../images/User_box_light.svg"
+import Image from "../images/User_box_light.svg";
+import Logo from "../images/logo.svg"
 
 function getKey() {
   let key = 1;
@@ -75,7 +76,7 @@ export function Todo() {
 
       <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-between">
 
-        <img src="../images/logo.svg" alt="" className="w-[100%] h-[100%]" />
+        <img src={Logo} alt="" />
 
 
         <div>
