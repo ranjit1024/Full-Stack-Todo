@@ -77,9 +77,9 @@ export function Todo() {
       <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-between">
 
         <img
-          className="w-[100%] h-[100%]  hover:cursor-pointer "
+          src="../imges/ssf"
 
-          alt=""
+          alt="lkj"
 
         />
 
