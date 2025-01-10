@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
+        "todo": "url('./images/main.svg')",
         "todo": "url('./images/main.svg')"
       },
       fontFamily: {
