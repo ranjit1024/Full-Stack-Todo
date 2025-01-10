@@ -190,9 +190,7 @@ export function SignIn() {
                 {
                   method: "POST",
 
-                  withCredentials: true,
-                  crossorigin: true,
-                  mode: 'no-cors',
+
                   body: JSON.stringify({
                     username: username.current.value,
                     password: password.current.value,
@@ -203,9 +201,6 @@ export function SignIn() {
                     'Access-Control-Allow-Origin': '*',
                     'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
                     'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
-
-
-
 
                   },
                 }
