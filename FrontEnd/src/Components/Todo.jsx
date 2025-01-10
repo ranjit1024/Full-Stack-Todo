@@ -76,7 +76,7 @@ export function Todo() {
         <div className="">
           <img
             className="w-[100%] h-[100%] ml-5"
-            src=".../images/main.svg"
+            src="./images/main.svg"
             alt=""
           />
         </div>
