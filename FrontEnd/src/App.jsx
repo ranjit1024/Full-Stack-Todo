@@ -14,16 +14,16 @@ import { Signout } from "./Components/Singnout";
 function App() {
   return (
     <div>
-      
+
       <BrowserRouter>
 
-      <Routes>
-        <Route path="/" element={<Landing/>}></Route>
-        <Route path="/signup" element={<Signup></Signup>}></Route>
-        <Route path="/signin" element={<SignIn></SignIn>}></Route>
-        <Route path="/todo" element={<Todo></Todo>}></Route>
-        <Route path="/signout" element={<Signout></Signout>}></Route>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Landing />}></Route>
+          <Route path="/signup" element={<Signup></Signup>} ></Route>
+          <Route path="/signin" element={<SignIn></SignIn>}></Route>
+          <Route path="/todo" element={<Todo></Todo>} loader={<div>Loading</div>}></Route>
+          <Route path="/signout" element={<Signout></Signout>}></Route>
+        </Routes>
       </BrowserRouter>
     </div>
 

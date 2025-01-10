@@ -76,7 +76,7 @@ export function Todo() {
         <div className="">
           <img
             className="w-[100%] h-[100%] ml-5"
-            src="./images/logo.svg"
+            src="../images/logo.svg"
             alt=""
           />
         </div>
@@ -84,7 +84,7 @@ export function Todo() {
         <div>
           <img
             className="w-[100%] h-[100%] hover:scale-105 transition-all duration-300 hover:cursor-pointer "
-            src="https://mern-todo-59u7.onrender.com/images/User_box_light.svg"
+            src="../images/User_box_light.svg"
             alt=""
             onClick={(e) => {
               setProfile(!profile);
