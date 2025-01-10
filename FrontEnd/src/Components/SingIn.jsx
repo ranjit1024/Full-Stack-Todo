@@ -197,6 +197,7 @@ export function SignIn() {
                   headers: {
                     "Content-type": "application/json",
                     "Content-Length": "110",
+                    "Access-Control-Allow-Origin": "*"
 
 
                   },
