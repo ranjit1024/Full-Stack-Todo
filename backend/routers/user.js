@@ -9,7 +9,11 @@ const dotenv = require("dotenv");
 
 const userRouter = express.Router();
 userRouter.use(express.json());
-userRouter.use(cors());
+userRouter.use(cors({
+  origin: ['https://full-stack-todo-c3cg.vercel.app/'],
+  methods: ['GET , POST'],
+  credentials: true
+}))
 
 //getting jwt secret
 dotenv.config({ path: ".env" });
