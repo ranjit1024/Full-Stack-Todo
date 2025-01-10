@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "todo": "url('./images/main.svg')"
+        "todo": "url('./images/main.svg')",
+        "logo": "url('./images/list.png')"
       },
       fontFamily: {
         "poppins": 'Poppins'
