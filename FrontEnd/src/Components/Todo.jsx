@@ -152,7 +152,7 @@ const AddTodo = memo(({ setAdd }) => {
               }
               setAdd(false);
 
-              window.location.reload();
+              // window.location.reload();
 
               const token = localStorage.getItem("Bearer");
               const response = await fetch(
