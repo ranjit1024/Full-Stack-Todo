@@ -76,7 +76,7 @@ export function Todo() {
         <div className="">
           <img
             className="w-[100%] h-[100%] ml-5"
-            src="https://mern-todo-59u7.onrender.com/images/logo.svg"
+            src="./images/logo.svg"
             alt=""
           />
         </div>
@@ -152,7 +152,7 @@ const AddTodo = memo(({ setAdd }) => {
               }
               setAdd(false);
 
-              // window.location.reload();
+              window.location.reload();
 
               const token = localStorage.getItem("Bearer");
               const response = await fetch(
@@ -255,7 +255,7 @@ function TaskComp({ date, title, descripition }) {
           method: 'POST',
           withCredentials: true,
           crossorigin: true,
-          mode: 'no-cors',
+
 
           body: JSON.stringify({
             date: date,
@@ -491,7 +491,7 @@ function ProfileComponent() {
     <div className="bg-slate-50 font-poppins p-10 absolute flex items-center justify-center flex-col top-12 right-2 rounded-lg shadow-lg shadow-gray-20 transition-all duration-300">
       <div>
         <img
-          src="https://mern-todo-59u7.onrender.com/images/list.png"
+          src="./images/list.png"
           alt=""
           className="w-40"
         />
