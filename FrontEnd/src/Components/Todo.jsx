@@ -73,8 +73,8 @@ export function Todo() {
       <ShowCompletedTask />
 
       <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-between">
-        <div className="bg-logo bg-contain bg-center bg-no-repeat" >
-
+        <div>
+          <img src="..\images\logo.svg" alt="" />
         </div>
 
         <div>
