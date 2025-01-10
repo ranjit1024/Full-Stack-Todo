@@ -490,7 +490,7 @@ function ProfileComponent() {
     <div className="bg-slate-50 font-poppins p-10 absolute flex items-center justify-center flex-col top-12 right-2 rounded-lg shadow-lg shadow-gray-20 transition-all duration-300">
       <div>
         <img
-          src="../images/main.svg"
+          src="../images/.svg"
           alt=""
           className="w-40"
         />
