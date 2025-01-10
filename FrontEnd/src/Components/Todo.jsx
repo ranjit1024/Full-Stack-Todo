@@ -13,8 +13,7 @@ import {
   todoList,
 } from "../state/atom/atom.jsx";
 import { useNavigate } from "react-router-dom";
-
-
+import Image from "../images/User_box_light.svg"
 
 function getKey() {
   let key = 1;
@@ -75,20 +74,21 @@ export function Todo() {
       <ShowCompletedTask />
 
       <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-between">
-        <h1>fwdfsda</h1>
-      </div>
 
-      <div>
-        <img
-          className="w-[100%] h-[100%] hover:scale-105 transition-all duration-300 hover:cursor-pointer "
-          src="../images/pattern.svg"
-          alt=""
-          onClick={(e) => {
-            setProfile(!profile);
-          }}
-        />
-      </div>
+        <img src="../images/logo.svg" alt="" className="w-[100%] h-[100%]" />
 
+
+        <div>
+          <img
+            className="w-[100%] h-[100%] hover:scale-105 transition-all duration-300 hover:cursor-pointer "
+            src={Image}
+            alt=""
+            onClick={(e) => {
+              setProfile(!profile);
+            }}
+          />
+        </div>
+      </div>
 
       {profile ? <ProfileComponent /> : null}
     </RecoilRoot >
