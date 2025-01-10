@@ -189,16 +189,15 @@ export function SignIn() {
                 "https://full-stack-todo-c3cg.vercel.app/user/signin",
                 {
                   method: "POST",
-                  mode: 'no-cors',
 
                   body: JSON.stringify({
                     username: username.current.value,
                     password: password.current.value,
                   }),
                   headers: {
-                    "Content-type": "application/json",
-                    "Content-Length": "110",
-                    "Access-Control-Allow-Origin": "*"
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+
 
 
                   },
