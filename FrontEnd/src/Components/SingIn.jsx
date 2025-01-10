@@ -183,7 +183,8 @@ export function SignIn() {
                   "1px solid red";
                 return;
               }
-
+              console.log(username.current.value)
+              console.log(password.current.value)
               const response = await fetch(
                 "https://full-stack-todo-c3cg.vercel.app/user/signin",
                 {
@@ -194,7 +195,9 @@ export function SignIn() {
                     password: password.current.value,
                   }),
                   headers: {
-                    "Content-type": "application/json; charset=UTF-8",
+                    "Content-type": "application/json",
+                    "Content-Length": "110",
+
 
                   },
                 }

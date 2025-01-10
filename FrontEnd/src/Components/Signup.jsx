@@ -232,7 +232,10 @@ export function Signup() {
               const response = await fetch(
                 "https://full-stack-todo-c3cg.vercel.app/user/signup",
                 {
-                  method: "POST",
+                  method: 'POST',
+                  withCredentials: true,
+                  crossorigin: true,
+                  mode: 'no-cors',
 
                   body: JSON.stringify({
                     username: email.current.value,
@@ -244,6 +247,8 @@ export function Signup() {
                   headers: {
                     "Content-type": "application/json; charset=UTF-8",
                     authorization: "none",
+                    "Content-Length": "110"
+
                   },
                 }
               );

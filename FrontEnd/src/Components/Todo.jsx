@@ -158,7 +158,10 @@ const AddTodo = memo(({ setAdd }) => {
               const response = await fetch(
                 "https://full-stack-todo-c3cg.vercel.app/todo/createtodo",
                 {
-                  method: "POST",
+                  method: 'POST',
+                  withCredentials: true,
+                  crossorigin: true,
+                  mode: 'no-cors',
 
                   body: JSON.stringify({
                     date: getDate,
@@ -248,7 +251,10 @@ function TaskComp({ date, title, descripition }) {
         const token = localStorage.getItem("Bearer");
 
         const response = fetch("https://full-stack-todo-c3cg.vercel.app/todo/completed", {
-          method: "POST",
+          method: 'POST',
+          withCredentials: true,
+          crossorigin: true,
+          mode: 'no-cors',
 
           body: JSON.stringify({
             date: date,
@@ -265,7 +271,10 @@ function TaskComp({ date, title, descripition }) {
         const deleteResponse = await fetch(
           "https://full-stack-todo-c3cg.vercel.app/todo/delete",
           {
-            method: "POST",
+            method: 'POST',
+            withCredentials: true,
+            crossorigin: true,
+            mode: 'no-cors',
 
             body: JSON.stringify({
               title: title,
