@@ -82,21 +82,20 @@ export function Todo() {
           alt="lkj"
 
         />
-
-
-        <div>
-          <img
-            className="w-[100%] h-[100%] hover:scale-105 transition-all duration-300 hover:cursor-pointer "
-            src="../images/fsd"
-            alt=""
-            onClick={(e) => {
-              setProfile(!profile);
-            }}
-          />
-        </div>
       </div>
+      <div>
+        <img
+          className="w-[100%] h-[100%] hover:scale-105 transition-all duration-300 hover:cursor-pointer "
+          src="../images/fsd"
+          alt=""
+          onClick={(e) => {
+            setProfile(!profile);
+          }}
+        />
+      </div>
+    </div>
 
-      {profile ? <ProfileComponent /> : null}
+      { profile ? <ProfileComponent /> : null }
     </RecoilRoot >
   );
 }
