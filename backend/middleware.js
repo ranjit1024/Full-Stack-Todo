@@ -19,11 +19,7 @@ const authMiddlware = async (req, res, next) => {
 
 
     try {
-        res.setHeader('Access-Control-Allow-Origin', '*'); // Replace with your client domain
 
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-
-        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
         const decode = jwt.verify(token, JWT_SECRET);
         req.userId = decode.userId;
