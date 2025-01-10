@@ -13,7 +13,7 @@ import {
   todoList,
 } from "../state/atom/atom.jsx";
 import { useNavigate } from "react-router-dom";
-
+import Image from "../images/User_box_light.svg";
 
 
 function getKey() {
@@ -77,25 +77,24 @@ export function Todo() {
       <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-between">
 
         <img
-          src="../imges/ssf"
 
-          alt="lkj"
 
         />
       </div>
+
       <div>
         <img
           className="w-[100%] h-[100%] hover:scale-105 transition-all duration-300 hover:cursor-pointer "
-          src="../images/fsd"
+          src={Image}
           alt=""
           onClick={(e) => {
             setProfile(!profile);
           }}
         />
       </div>
-    </div>
 
-      { profile ? <ProfileComponent /> : null }
+
+      {profile ? <ProfileComponent /> : null}
     </RecoilRoot >
   );
 }
