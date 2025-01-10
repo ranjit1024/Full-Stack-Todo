@@ -14,7 +14,7 @@ import {
 } from "../state/atom/atom.jsx";
 import { useNavigate } from "react-router-dom";
 import Image from "../images/User_box_light.svg";
-import Logo from "../images/logo.svg";
+
 
 function getKey() {
   let key = 1;
@@ -78,7 +78,7 @@ export function Todo() {
 
         <img
           className="w-[100%] h-[100%]  hover:cursor-pointer "
-          src={Logo}
+
           alt=""
 
         />
