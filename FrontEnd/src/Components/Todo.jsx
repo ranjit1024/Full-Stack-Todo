@@ -73,8 +73,12 @@ export function Todo() {
       <ShowCompletedTask />
 
       <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-between">
-        <div className="bg-main">
-
+        <div >
+          <img
+            className="w-[100%] h-[100%] ml-5"
+            src="../images/main.svg"
+            alt=""
+          />
         </div>
 
         <div>
@@ -90,7 +94,7 @@ export function Todo() {
       </div>
 
       {profile ? <ProfileComponent /> : null}
-    </RecoilRoot>
+    </RecoilRoot >
   );
 }
 

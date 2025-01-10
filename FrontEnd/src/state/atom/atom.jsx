@@ -40,6 +40,8 @@ export const todoList = atom({
 
 export const completeTodoList = atom({
     key: "allcompleAtom",
+    withCredentials: true,
+    crossorigin: true,
     default: selector({
         key: "fetchallcomlettodo",
         get: async () => {
