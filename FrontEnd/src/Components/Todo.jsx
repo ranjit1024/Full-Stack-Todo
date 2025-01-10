@@ -13,7 +13,7 @@ import {
   todoList,
 } from "../state/atom/atom.jsx";
 import { useNavigate } from "react-router-dom";
-import Image from "../images/User_box_light.svh"
+import Image from "../images/User_box_light.svg"
 
 function getKey() {
   let key = 1;
