@@ -75,11 +75,7 @@ export function Todo() {
       <ShowCompletedTask />
 
       <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-between">
-
-        <img
-
-
-        />
+        fsdf
       </div>
 
       <div>
