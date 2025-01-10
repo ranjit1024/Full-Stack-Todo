@@ -152,7 +152,7 @@ const AddTodo = memo(({ setAdd }) => {
               }
               setAdd(false);
 
-              // window.location.reload();
+
 
               const token = localStorage.getItem("Bearer");
               const response = await fetch(
@@ -178,7 +178,10 @@ const AddTodo = memo(({ setAdd }) => {
               );
 
               const data = await response.json();
+
+              window.location.reload();
             }}
+
           >
             Add Task
           </button>
@@ -491,7 +494,7 @@ function ProfileComponent() {
     <div className="bg-slate-50 font-poppins p-10 absolute flex items-center justify-center flex-col top-12 right-2 rounded-lg shadow-lg shadow-gray-20 transition-all duration-300">
       <div>
         <img
-          src=".\FrontEnd\src\images\list.png"
+          src="../images/main.svg"
           alt=""
           className="w-40"
         />
