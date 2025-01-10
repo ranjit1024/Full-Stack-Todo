@@ -148,10 +148,10 @@ export function SignIn() {
                   )}
                 </div>
               </div>
-                  {
-                    isPasswordValid?<PasswordValidator/>:null
-                  }
-             
+              {
+                isPasswordValid ? <PasswordValidator /> : null
+              }
+
 
               <p class="flex items-start mt-2 text-xs text-slate-500">
                 <svg
@@ -185,7 +185,7 @@ export function SignIn() {
               }
 
               const response = await fetch(
-                "https://mern-todo-59u7.onrender.com/user/signin",
+                "https://full-stack-todo-c3cg.vercel.app/user/signin",
                 {
                   method: "POST",
 
@@ -195,12 +195,12 @@ export function SignIn() {
                   }),
                   headers: {
                     "Content-type": "application/json; charset=UTF-8",
-                   
+
                   },
                 }
               );
               const data = await response.json();
-        
+
               if (data.message == "username Not found") {
                 setValidEmail(true);;
                 return;
@@ -212,7 +212,7 @@ export function SignIn() {
               localStorage.setItem("Bearer", data.token);
               navigate("/todo");
 
-            
+
 
             }}
           >

@@ -5,7 +5,11 @@ const { Complete, Todo, User } = require("../db/index.js");
 let count = 1;
 
 const todoRouter = express.Router();
-todoRouter.use(cors());
+todoRouter.use(cors({
+   origin: ['https://full-stack-todo-eta.vercel.app/'],
+   methods: ['GET , POST'],
+   credentials: true
+}))
 todoRouter.use(express.json());
 
 

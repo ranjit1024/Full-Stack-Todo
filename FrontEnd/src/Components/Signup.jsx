@@ -23,7 +23,7 @@ export function Signup() {
       }}
     >
       {
-        token? <Navigate to={"/todo"}/>:null
+        token ? <Navigate to={"/todo"} /> : null
       }
 
       <div className="bg-gradient-to-tl to-green-200 from-blue-100 first">
@@ -159,7 +159,7 @@ export function Signup() {
               ref={email}
               className="email w-full bg-gray-100 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-blue-400 hover:border-blue-300 shadow-sm focus:shadow font-poppins"
               placeholder="youremail@gmail.com"
-              id="email"http
+              id="email" http
             />
             {isEmailValid ? <EmptyEmail /> : null}
           </div>
@@ -230,7 +230,7 @@ export function Signup() {
               }
 
               const response = await fetch(
-                "https://mern-todo-59u7.onrender.com/user/signup",
+                "https://full-stack-todo-c3cg.vercel.app/user/signup",
                 {
                   method: "POST",
 
@@ -260,7 +260,7 @@ export function Signup() {
 
               localStorage.setItem("Bearer", token);
 
-             
+
 
               if (message == "You have Been Successfully Created Account") {
                 return navigate("/todo", { replace: true });

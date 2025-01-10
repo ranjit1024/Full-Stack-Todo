@@ -1,52 +1,52 @@
 import recoil, { atom, selector } from "recoil"
 const date = new Date;
 export const dateAtom = recoil.atom({
-    key:'todoAtom',
+    key: 'todoAtom',
     default: date.toDateString(),
 })
 
 export const titleAtom = recoil.atom({
-    key:"titleAtom",
-    default:''
+    key: "titleAtom",
+    default: ''
 })
 export const desAtom = recoil.atom({
-    key:"desAtom",
-    default:''
+    key: "desAtom",
+    default: ''
 })
 
 export const todoList = atom({
-    key:"allTodoAtom",
+    key: "allTodoAtom",
     default: selector({
-        key:"fetchalltodo",
-        get: async () =>{
+        key: "fetchalltodo",
+        get: async () => {
             const token = localStorage.getItem("Bearer");
-            const response = await fetch("https://mern-todo-59u7.onrender.com/todo/listtodo",{
+            const response = await fetch("https://full-stack-todo-c3cg.vercel.app/todo/listtodo", {
                 headers: {
                     "Content-type": "application/json; charset=UTF-8",
-                    authorization:`Bearer ${token}`
-                  },
+                    authorization: `Bearer ${token}`
+                },
             });
             const data = response.json();
-            
+
             return data;
         }
     })
 })
 
 export const completeTodoList = atom({
-    key:"allcompleAtom",
+    key: "allcompleAtom",
     default: selector({
-        key:"fetchallcomlettodo",
-        get: async () =>{
+        key: "fetchallcomlettodo",
+        get: async () => {
             const token = localStorage.getItem("Bearer");
-            const response = await fetch("https://mern-todo-59u7.onrender.com/todo/completetodo",{
+            const response = await fetch("https://full-stack-todo-c3cg.vercel.app/todo/completetodo", {
                 headers: {
                     "Content-type": "application/json; charset=UTF-8",
-                    authorization:`Bearer ${token}`
-                  },
+                    authorization: `Bearer ${token}`
+                },
             });
             const data = response.json();
-            
+
             return data;
         }
     })

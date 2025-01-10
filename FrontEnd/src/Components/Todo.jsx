@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useMemo, memo,  } from "react";
+import { useState, useRef, useEffect, useMemo, memo, } from "react";
 import {
   RecoilRoot,
   useRecoilState,
@@ -156,7 +156,7 @@ const AddTodo = memo(({ setAdd }) => {
 
               const token = localStorage.getItem("Bearer");
               const response = await fetch(
-                "https://mern-todo-59u7.onrender.com/todo/createtodo",
+                "https://full-stack-todo-c3cg.vercel.app/todo/createtodo",
                 {
                   method: "POST",
 
@@ -247,7 +247,7 @@ function TaskComp({ date, title, descripition }) {
       onClick={async (e) => {
         const token = localStorage.getItem("Bearer");
 
-        const response = fetch("https://mern-todo-59u7.onrender.com/todo/completed", {
+        const response = fetch("https://full-stack-todo-c3cg.vercel.app/todo/completed", {
           method: "POST",
 
           body: JSON.stringify({
@@ -263,7 +263,7 @@ function TaskComp({ date, title, descripition }) {
         });
 
         const deleteResponse = await fetch(
-          "https://mern-todo-59u7.onrender.com/todo/delete",
+          "https://full-stack-todo-c3cg.vercel.app/todo/delete",
           {
             method: "POST",
 
@@ -291,7 +291,7 @@ function TaskComp({ date, title, descripition }) {
               strokeWidth="1.5"
               stroke="currentColor"
               className="size-5"
-              onClick={(e) => {}}
+              onClick={(e) => { }}
             >
               <path
                 strokeLinecap="round"
@@ -507,7 +507,7 @@ function ProfileComponent() {
           Sign out
         </button>
 
-       
+
       </div>
     </div>
   );
