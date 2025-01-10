@@ -23,11 +23,11 @@ export const todoList = atom({
             const token = localStorage.getItem("Bearer");
             const response = await fetch("https://full-stack-todo-c3cg.vercel.app/todo/listtodo", {
                 method: 'GET',
-                withCredentials: true,
-                crossorigin: true,
+
 
                 headers: {
-                    "Content-type": "application/json; charset=UTF-8",
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json',
                     authorization: `Bearer ${token}`
                 },
             });
@@ -40,19 +40,18 @@ export const todoList = atom({
 
 export const completeTodoList = atom({
     key: "allcompleAtom",
-    withCredentials: true,
-    crossorigin: true,
+
     default: selector({
         key: "fetchallcomlettodo",
         get: async () => {
             const token = localStorage.getItem("Bearer");
             const response = await fetch("https://full-stack-todo-c3cg.vercel.app/todo/completetodo", {
                 method: 'GET',
-                withCredentials: true,
-                crossorigin: true,
+
 
                 headers: {
-                    "Content-type": "application/json; charset=UTF-8",
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json',
                     authorization: `Bearer ${token}`
                 },
             });
