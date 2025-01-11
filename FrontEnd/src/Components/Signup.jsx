@@ -244,9 +244,8 @@ export function Signup() {
                   }),
 
                   headers: {
-                    "Content-type": "application/json; charset=UTF-8",
-                    authorization: "none",
-
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json',
 
                   },
                 }
