@@ -3,6 +3,7 @@ import {
   RecoilRoot,
   useRecoilState,
   useRecoilValue,
+  useRecoilValueLoadable,
   useSetRecoilState,
 } from "recoil";
 import {
@@ -68,7 +69,7 @@ export function Todo() {
         {add ? <AddTodo setAdd={setAdd}></AddTodo> : null}
 
         <div className="w-[100%] mb-4 h-[100%] bg-gradient-to-tl to-green-100 from-blue-50  ">
-          {<ListTodoCompoent></ListTodoCompoent>}
+          {<ListTodoCompoent fallback={<p>fsdfs</p>}></ListTodoCompoent>}
         </div>
       </div>
       <ShowCompletedTask />
@@ -209,6 +210,8 @@ const AddTodo = memo(({ setAdd }) => {
 const ListTodoCompoent = memo(() => {
   let todolist = useRecoilValue(todoList);
   let getkey = getKey();
+
+
   return (
     <div className="flex justify-center items-center ">
       <div
@@ -230,6 +233,7 @@ const ListTodoCompoent = memo(() => {
       </div>
     </div>
   );
+
 });
 
 function TaskComp({ date, title, descripition }) {
