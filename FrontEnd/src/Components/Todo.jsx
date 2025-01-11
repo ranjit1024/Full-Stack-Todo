@@ -145,7 +145,7 @@ const AddTodo = memo(({ setAdd }) => {
                 document.querySelector("#des").style.border = "1px solid red";
                 return;
               }
-              setAdd(false);
+
 
 
 
@@ -171,9 +171,8 @@ const AddTodo = memo(({ setAdd }) => {
                   },
                 }
               );
-
+              setAdd(false);
               const data = await response.json();
-
               window.location.reload();
             }}
 
