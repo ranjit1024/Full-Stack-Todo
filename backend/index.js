@@ -29,7 +29,7 @@ App.use("/todo", todoRouter);
 App.use('/images', express.static(path.join(_dirname, '/FrontEnd/src/images')));
 
 App.use(cors({
-    origin: ['https://full-stack-todo-eta.vercel.app/'],
+    origin: ['https://full-stack-todo-lac.vercel.app/'],
     methods: ['GET , POST'],
     credentials: true
 }))

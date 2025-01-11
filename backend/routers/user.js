@@ -10,7 +10,7 @@ const dotenv = require("dotenv");
 const userRouter = express.Router();
 userRouter.use(express.json());
 userRouter.use(cors({
-  origin: ['https://full-stack-todo-c3cg.vercel.app/'],
+  origin: ['https://full-stack-todo-lac.vercel.app/'],
   methods: ['GET , POST'],
   credentials: true
 }))

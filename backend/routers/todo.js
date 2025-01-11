@@ -6,7 +6,7 @@ let count = 1;
 
 const todoRouter = express.Router();
 todoRouter.use(cors({
-   origin: ['https://full-stack-todo-eta.vercel.app/'],
+   origin: ['https://full-stack-todo-lac.vercel.app/'],
    methods: ['GET , POST'],
    credentials: true
 }))

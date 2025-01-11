@@ -13,7 +13,8 @@ import {
   todoList,
 } from "../state/atom/atom.jsx";
 import { useNavigate } from "react-router-dom";
-
+import userLogo from "../images/User_box_light.svg"
+import Logo from "../images/list.png"
 function getKey() {
   let key = 1;
 
@@ -72,15 +73,12 @@ export function Todo() {
       </div>
       <ShowCompletedTask />
 
-      <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-between">
-        <div>
-          <img src="../images/logo.svg" alt="" />
-        </div>
+      <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-end">
 
         <div>
           <img
             className="w-[100%] h-[100%] hover:scale-105 transition-all duration-300 hover:cursor-pointer "
-            src="../images/User_box_light.svg"
+            src={userLogo}
             alt=""
             onClick={(e) => {
               setProfile(!profile);
@@ -378,7 +376,7 @@ function IsComplete() {
         xmlns="http://www.w3.org/2000/svg"
         width="50"
         height="50"
-        fill="#004526
+        fill="#004526f
 "
         className="bi bi-check-all "
         viewBox="0 0 16 16"
@@ -490,7 +488,7 @@ function ProfileComponent() {
     <div className="bg-slate-50 font-poppins p-10 absolute flex items-center justify-center flex-col top-12 right-2 rounded-lg shadow-lg shadow-gray-20 transition-all duration-300">
       <div>
         <img
-          src="../images/.svg"
+          src={Logo}
           alt=""
           className="w-40"
         />
