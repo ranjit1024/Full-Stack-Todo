@@ -376,8 +376,8 @@ function IsComplete() {
         xmlns="http://www.w3.org/2000/svg"
         width="50"
         height="50"
-        fill="#004526f
-"
+        fill="#006400"
+
         className="bi bi-check-all "
         viewBox="0 0 16 16"
       >
