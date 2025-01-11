@@ -16,6 +16,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import userLogo from "../images/User_box_light.svg"
 import Logo from "../images/list.png"
+import mainLogin from "../images/Todo-image.svg"
 function getKey() {
   let key = 1;
 
@@ -74,8 +75,8 @@ export function Todo() {
       </div>
       <ShowCompletedTask />
 
-      <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-end">
-
+      <div className="absolute  top-1 right-3 w-[100%] h-[6%] flex justify-between text-center">
+        <img src={mainLogin} alt="" className="ml-10" />
         <div>
           <img
             className="w-[100%] h-[100%] hover:scale-105 transition-all duration-300 hover:cursor-pointer "
